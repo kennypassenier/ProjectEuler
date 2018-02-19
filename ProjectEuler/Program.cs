@@ -10,7 +10,9 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            new Problem1();
+            //new Problem1();
+            //new Problem2();
+            
         }
     }
 }
