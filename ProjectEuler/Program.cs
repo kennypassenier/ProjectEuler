@@ -12,7 +12,9 @@ namespace ProjectEuler
         {
             //new Problem1();
             //new Problem2();
-            
+            //new Problem3();
+            //new Problem4();
+            new Problem5();
         }
     }
 }
