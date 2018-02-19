@@ -13,8 +13,8 @@ namespace ProjectEuler
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            int limit = 20;
-            int number = 1;
+            long limit = 30;
+            long number = 1;
             while(MathHelper.IsEvenlyDivisible(number, limit) == false)
             {
                 number++;
