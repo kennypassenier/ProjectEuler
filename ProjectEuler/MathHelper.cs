@@ -122,14 +122,25 @@ namespace ProjectEuler
         {
             for (int divisor = 1; divisor < limit + 1; divisor++)
             {
-                if(number % divisor != 0)
+                if (number % divisor != 0)
                 {
                     return false;
                 }
             }
             return true;
         }
-              
+        public static bool IsEvenlyDivisible(long number, long limit)
+        {
+            for (long divisor = 1; divisor < limit + 1; divisor++)
+            {
+                if (number % divisor != 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
 
 
     }
