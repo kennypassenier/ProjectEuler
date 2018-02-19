@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace ProjectEuler
@@ -10,11 +11,15 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            //new Problem1();
-            //new Problem2();
-            //new Problem3();
-            //new Problem4();
-            new Problem5();
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+
+            new Problem8;
+
+
+            sw.Stop();
+            Console.WriteLine(String.Format("Solution found in {0} milliseconds", sw.ElapsedMilliseconds));
         }
     }
 }
