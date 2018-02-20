@@ -15,7 +15,7 @@ namespace ProjectEuler
             sw.Start();
 
 
-            new Problem8;
+            new Problem10();
 
 
             sw.Stop();
