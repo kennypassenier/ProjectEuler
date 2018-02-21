@@ -11,27 +11,24 @@ namespace ProjectEuler
         public Problem14()
         {
 
-            
-            foreach (var item in CollatzSequence(28))
+
+
+            int limit = 1000000;
+            long longestChain = 1;
+            long longestChainLength = 1;
+            for (long number = 100000; number < limit; number++)
             {
-                Console.WriteLine(item);
+                List<long> sequence = CollatzSequence(number);
+                if (sequence.Count > longestChainLength)
+                {
+                    longestChainLength = sequence.Count;
+                    longestChain = number;
+                }
             }
-            //int limit = 1000000;
-            //int longestChain = 1;
-            //int longestChainLength = 1;
-            //for (int number = 1; number < limit; number++)
-            //{
-            //    List<int> sequence = CollatzSequence(number);
-            //    if (sequence.Count > longestChainLength)
-            //    {
-            //        longestChainLength = sequence.Count;
-            //        longestChain = number;
-            //    }
-            //}
-            //Console.WriteLine(String.Format("The longest chain is {0} long and comes from the number: {1}", longestChainLength, longestChain));
+            Console.WriteLine(String.Format("The longest chain is {0} long and comes from the number: {1}", longestChainLength, longestChain));
         }
 
-        private int CollatzNext(int number)
+        private long CollatzNext(long number)
         {
             if(number % 2 == 0)
             {
@@ -43,9 +40,9 @@ namespace ProjectEuler
             }
         }
 
-        private List<int> CollatzSequence(int number)
+        private List<long> CollatzSequence(long number)
         {
-            List<int> SequenceList = new List<int>() { number };
+            List<long> SequenceList = new List<long>() { number };
             while (SequenceList[SequenceList.Count - 1] != 1)
             {
                 SequenceList.Add(CollatzNext(SequenceList[SequenceList.Count - 1]));
