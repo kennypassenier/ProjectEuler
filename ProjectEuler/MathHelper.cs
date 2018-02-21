@@ -49,9 +49,9 @@ namespace ProjectEuler
             else
             {
                 int limit = (int)Math.Sqrt(number) + 1;
-                for (int possiblePrime = 3; possiblePrime < limit; possiblePrime++)
+                for (int possiblePrime = 3; possiblePrime <= limit; possiblePrime++)
                 {
-                    if ((number % possiblePrime) == 0)
+                    if (number % possiblePrime == 0)
                     {
                         return false;
                     }

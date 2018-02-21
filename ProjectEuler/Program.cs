@@ -15,8 +15,13 @@ namespace ProjectEuler
             sw.Start();
 
 
-            new Problem10();
-
+            for (int i = 0; i < 100; i++)
+            {
+                if (MathHelper.IsPrime(i))
+                {
+                    Console.WriteLine(i);
+                }
+            }
 
             sw.Stop();
             Console.WriteLine(String.Format("Solution found in {0} milliseconds", sw.ElapsedMilliseconds));
