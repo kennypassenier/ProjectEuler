@@ -46,12 +46,16 @@ namespace ProjectEuler
             {
                 return true;
             }
+            else if (number % 2 == 0)
+            {
+                return false;
+            }
             else
             {
                 int limit = (int)Math.Sqrt(number) + 1;
-                for (int possiblePrime = 3; possiblePrime < limit; possiblePrime++)
+                for (int possiblePrime = 3; possiblePrime <= limit; possiblePrime++)
                 {
-                    if ((number % possiblePrime) == 0)
+                    if (number % possiblePrime == 0)
                     {
                         return false;
                     }
@@ -89,6 +93,10 @@ namespace ProjectEuler
             else if (number == 2)
             {
                 return true;
+            }
+            else if (number % 2 == 0)
+            {
+                return false;
             }
             else
             {
@@ -141,6 +149,15 @@ namespace ProjectEuler
             return true;
         }
 
+        public static int TriangleNumber(int number)
+        {
+            int result = 0;
+            for (int counter = 1; counter <= number; counter++)
+            {
+                result += counter;
+            }
+            return result;
+        }
 
 
     }

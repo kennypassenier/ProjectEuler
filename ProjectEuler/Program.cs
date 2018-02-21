@@ -15,11 +15,11 @@ namespace ProjectEuler
             sw.Start();
 
 
-            new Problem10();
-
+            new Problem14();
 
             sw.Stop();
             Console.WriteLine(String.Format("Solution found in {0} milliseconds", sw.ElapsedMilliseconds));
+
         }
     }
 }
