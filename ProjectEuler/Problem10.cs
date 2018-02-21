@@ -10,7 +10,7 @@ namespace ProjectEuler
     {
         public Problem10()
         {
-            int limit = 10;
+            int limit = 2000000;
             List<int> primes = new List<int>();
             long sum = 0;
             for (int number = 1; number < limit; number++)
@@ -18,7 +18,6 @@ namespace ProjectEuler
                 
                 if (MathHelper.IsPrime(number))
                 {
-                    Console.WriteLine(number);
                     sum += number;
                 }                
             }
