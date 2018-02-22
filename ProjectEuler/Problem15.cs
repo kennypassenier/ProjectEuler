@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ProjectEuler
+    // This would work if I had a MUCH more powerful computer. 
 {
     public class Problem15
     {
@@ -42,31 +43,43 @@ namespace ProjectEuler
         // Constructor
         public Problem15()
         {
-            const int limit = 2; // Determines the size of the grid.
+            const int limit = 20; // Determines the size of the grid.
             int xCoordinateMax = limit, yCoordinateMax = limit;
             Keuze = new Random();
-            X = 0;
-            Y = 0;
             SuccesfullSequences = new List<string>();
             for (int teller = 1; teller < 1000000; teller++)
             {
+                Console.Clear();
+                Console.WriteLine(teller);
+                X = 0;
+                Y = 0;
                 List<string> Sequence = new List<string>();
-                while ((X <= xCoordinateMax) && (Y <= yCoordinateMax) && (X >= 0) && (Y >= 0))
+                while (X <= xCoordinateMax  && Y <= yCoordinateMax)
                 {
                     Sequence.Add(Move());
+                    Console.WriteLine(ToString());
                     if (X == limit && Y == limit) // If we succesfully travelled to the end. 
                     {
-                        SuccesfullSequences.Add(Sequence.ToString());
+                        string succesfullString = String.Join(String.Empty, Sequence.ToArray());
+                        if (SuccesfullSequences.Contains(succesfullString))
+                        {
+                            Console.WriteLine("Duplicate found");
+                        }
+                        else
+                        {
+                            SuccesfullSequences.Add(String.Join(String.Empty, Sequence.ToArray()));
+                        }                        
+                        break;
                     }
                 }
             }
-            Console.WriteLine("Debug");
             if(SuccesfullSequences != null)
             {
                 foreach (var item in SuccesfullSequences)
                 {
                     Console.WriteLine(item);
                 }
+                Console.WriteLine(SuccesfullSequences.Count);
             }
             else
             {
@@ -76,29 +89,24 @@ namespace ProjectEuler
 
         }
 
+        public override string ToString()
+        {
+            return String.Format("X: {0}/t Y: {1}", X, Y);
+        }
+
         private string Move()
         {
             // 1 is up, 2 is right, 3 is down, 4 is left.
-            int direction = Keuze.Next(1, 5);
-            if (direction == 1)
-            {
-                Y -= 1;
-                return "N";
-            }
-            else if(direction == 2)
+            int direction = Keuze.Next(1, 3);
+            if(direction == 1)
             {
                 X += 1;
                 return "E";
             }
-            else if (direction == 3)
+            else if (direction == 2)
             {
                 Y += 1;
                 return "S";
-            }
-            else if (direction == 4)
-            {
-                X -= 1;
-                return "W";
             }
             else
             {
