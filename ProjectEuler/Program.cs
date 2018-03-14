@@ -14,8 +14,11 @@ namespace ProjectEuler
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
+            var persoon = new Persoon(new List<string> { "bart", "jan", "jos" });
+            Console.WriteLine(persoon.ToString());
 
-            new Problem15();
+
+            //new Problem17();
 
             sw.Stop();
             Console.WriteLine(String.Format("Solution found in {0} milliseconds", sw.ElapsedMilliseconds));
