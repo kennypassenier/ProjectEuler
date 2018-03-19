@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Numerics;
 using System.Threading.Tasks;
 
 namespace ProjectEuler
@@ -159,6 +160,29 @@ namespace ProjectEuler
             return result;
         }
 
+        // De factorials werken in principe wel, maar blijkbaar gaat er toch ergens nog iets
+        // fout want Problem20 van Project Euler werkt nog altijd niet.
 
+        //public static int Factorial(int number)
+        //{
+        //    if (number == 1)
+        //        return 1;
+        //    else
+        //        return number * Factorial(number - 1);
+        //}
+        //public static long Factorial(long number)
+        //{
+        //    if (number == 1)
+        //        return 1;
+        //    else
+        //        return number * Factorial(number - 1);
+        //}
+        //public static BigInteger Factorial(int number)
+        //{
+        //    if (number == 1)
+        //        return 1;
+        //    else
+        //        return number * Factorial(number - 1);
+        //}
     }
 }
