@@ -14,8 +14,8 @@ namespace ProjectEuler
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            new Problem20();
-
+            new Problem23();
+            
             sw.Stop();
             Console.WriteLine(String.Format("Solution found in {0} milliseconds", sw.ElapsedMilliseconds));
 

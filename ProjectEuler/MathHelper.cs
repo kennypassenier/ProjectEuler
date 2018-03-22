@@ -66,7 +66,7 @@ namespace ProjectEuler
         }
 
         // Returns a list of factors. Including the number itself. 
-        public static List<long> Factors(long number, bool ordered = false)
+        public static List<long> LongFactors(long number, bool ordered = false)
         {
             List<long> factorList = new List<long>();
             long limit = (long)Math.Sqrt(number) + 1;
@@ -83,6 +83,23 @@ namespace ProjectEuler
                 factorList.Sort();
             }
             return factorList;
+        }
+
+        public static List<int> ProperDivisors(int number, bool ordered = false)
+        {
+            List<int> PDivisorList = Factors(number);
+            PDivisorList.Remove(number);
+            return PDivisorList;
+        }
+
+        public static int SumOfProperDivisors(int number)
+        {
+            int result = 0;
+            foreach (var item in ProperDivisors(number))
+            {
+                result += item;
+            }
+            return result;
         }
 
         public static bool IsPrime(long number)
@@ -163,26 +180,26 @@ namespace ProjectEuler
         // De factorials werken in principe wel, maar blijkbaar gaat er toch ergens nog iets
         // fout want Problem20 van Project Euler werkt nog altijd niet.
 
-        //public static int Factorial(int number)
-        //{
-        //    if (number == 1)
-        //        return 1;
-        //    else
-        //        return number * Factorial(number - 1);
-        //}
-        //public static long Factorial(long number)
-        //{
-        //    if (number == 1)
-        //        return 1;
-        //    else
-        //        return number * Factorial(number - 1);
-        //}
-        //public static BigInteger Factorial(int number)
-        //{
-        //    if (number == 1)
-        //        return 1;
-        //    else
-        //        return number * Factorial(number - 1);
-        //}
+        public static int Factorial(int number)
+        {
+            if (number == 1)
+                return 1;
+            else
+                return number * Factorial(number - 1);
+        }
+        public static long LongFactorial(long number)
+        {
+            if (number == 1)
+                return 1;
+            else
+                return number * LongFactorial(number - 1);
+        }
+        public static BigInteger BigIntFactorial(int number)
+        {
+            if (number == 1)
+                return 1;
+            else
+                return number * BigIntFactorial(number - 1);
+        }
     }
 }

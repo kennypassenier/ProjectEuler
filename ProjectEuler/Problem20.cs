@@ -18,7 +18,7 @@ namespace ProjectEuler
         }
         public Problem20()
         {
-            Number = MathHelper.Factorial(100);
+            Number = MathHelper.BigIntFactorial(100);
             Console.WriteLine($"Number: {Number}");
             Console.WriteLine(SumOfDigits(Number.ToString()));
         }

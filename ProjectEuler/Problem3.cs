@@ -11,7 +11,7 @@ namespace ProjectEuler
         public Problem3()
         {
             List<int> primes = new List<int>();
-            foreach (var item in MathHelper.Factors(600851475143))
+            foreach (var item in MathHelper.LongFactors(600851475143))
             {
                 if (MathHelper.IsPrime(item))
                 {
