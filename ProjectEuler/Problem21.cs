@@ -8,11 +8,11 @@ namespace ProjectEuler
 {
     public class Problem21
     {
-        private int limit = 10000;
+        private int _limit = 10000;
         public Problem21()
         {
-            List<int> AmicableNumbers = new List<int>();
-            for (int counter = 1; counter < limit; counter++)
+            List<int> amicableNumbers = new List<int>();
+            for (int counter = 1; counter < _limit; counter++)
             {
                 int result = MathHelper.SumOfProperDivisors(counter);
                 int resultSum = MathHelper.SumOfProperDivisors(result);
@@ -20,10 +20,10 @@ namespace ProjectEuler
                 {
                     // Als het resultaat hetzelfde is als het grondgetal, spreken we niet over een amicable number.
                     if (result != counter)
-                        AmicableNumbers.Add(counter);
+                        amicableNumbers.Add(counter);
                 }
             }
-            Console.WriteLine(AmicableNumbers.Sum());           
+            Console.WriteLine(amicableNumbers.Sum());           
         }
     }
 }

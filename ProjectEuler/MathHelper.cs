@@ -87,9 +87,9 @@ namespace ProjectEuler
 
         public static List<int> ProperDivisors(int number, bool ordered = false)
         {
-            List<int> PDivisorList = Factors(number);
-            PDivisorList.Remove(number);
-            return PDivisorList;
+            List<int> pDivisorList = Factors(number);
+            pDivisorList.Remove(number);
+            return pDivisorList;
         }
 
         public static int SumOfProperDivisors(int number)

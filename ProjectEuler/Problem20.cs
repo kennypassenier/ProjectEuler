@@ -9,12 +9,12 @@ namespace ProjectEuler
 {
     public class Problem20
     {
-        private BigInteger numberValue;
+        private BigInteger _numberValue;
 
         public BigInteger Number
         {
-            get { return numberValue; }
-            set { numberValue = value; }
+            get { return _numberValue; }
+            set { _numberValue = value; }
         }
         public Problem20()
         {

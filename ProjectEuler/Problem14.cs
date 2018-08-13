@@ -42,12 +42,12 @@ namespace ProjectEuler
 
         private List<long> CollatzSequence(long number)
         {
-            List<long> SequenceList = new List<long>() { number };
-            while (SequenceList[SequenceList.Count - 1] != 1)
+            List<long> sequenceList = new List<long>() { number };
+            while (sequenceList[sequenceList.Count - 1] != 1)
             {
-                SequenceList.Add(CollatzNext(SequenceList[SequenceList.Count - 1]));
+                sequenceList.Add(CollatzNext(sequenceList[sequenceList.Count - 1]));
             }
-            return SequenceList;
+            return sequenceList;
             
         }        
     }

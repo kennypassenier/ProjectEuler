@@ -8,26 +8,26 @@ namespace ProjectEuler
 {
     public class Problem17
     {        
-        private Dictionary<int, string> oneToNineteenValue;
+        private Dictionary<int, string> _oneToNineteenValue;
 
         public Dictionary<int, string> OneToNineteen
         {
-            get { return oneToNineteenValue; }
-            set { oneToNineteenValue = value; }
+            get { return _oneToNineteenValue; }
+            set { _oneToNineteenValue = value; }
         }
-        private Dictionary<int, string> tensValue;
+        private Dictionary<int, string> _tensValue;
 
         public Dictionary<int, string> Tens
         {
-            get { return tensValue; }
-            set { tensValue = value; }
+            get { return _tensValue; }
+            set { _tensValue = value; }
         }
-        private Dictionary<int, string> hundredsValue;
+        private Dictionary<int, string> _hundredsValue;
 
         public Dictionary<int, string> Hundreds
         {
-            get { return hundredsValue; }
-            set { hundredsValue = value; }
+            get { return _hundredsValue; }
+            set { _hundredsValue = value; }
         }
 
 

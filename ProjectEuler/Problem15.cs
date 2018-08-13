@@ -8,35 +8,35 @@ namespace ProjectEuler
 {
     public class Problem15
     {
-        private Random keuzeValue;
+        private Random _keuzeValue;
 
         public Random Keuze
         {
-            get { return keuzeValue; }
-            set { keuzeValue = value; }
+            get { return _keuzeValue; }
+            set { _keuzeValue = value; }
         }
 
-        private int xValue;
+        private int _xValue;
 
         public int X
         {
-            get { return xValue; }
-            set { xValue = value; }
+            get { return _xValue; }
+            set { _xValue = value; }
         }
-        private int yValue;
+        private int _yValue;
 
         public int Y
         {
-            get { return yValue; }
-            set { yValue = value; }
+            get { return _yValue; }
+            set { _yValue = value; }
         }
 
-        private List<string> successfullSequencesValue;
+        private List<string> _successfullSequencesValue;
 
         public List<string> SuccesfullSequences
         {
-            get { return successfullSequencesValue; }
-            set { successfullSequencesValue = value; }
+            get { return _successfullSequencesValue; }
+            set { _successfullSequencesValue = value; }
         }
         
         // Constructor
@@ -50,13 +50,13 @@ namespace ProjectEuler
             SuccesfullSequences = new List<string>();
             for (int teller = 1; teller < 1000000; teller++)
             {
-                List<string> Sequence = new List<string>();
+                List<string> sequence = new List<string>();
                 while ((X <= xCoordinateMax) && (Y <= yCoordinateMax) && (X >= 0) && (Y >= 0))
                 {
-                    Sequence.Add(Move());
+                    sequence.Add(Move());
                     if (X == limit && Y == limit) // If we succesfully travelled to the end. 
                     {
-                        SuccesfullSequences.Add(Sequence.ToString());
+                        SuccesfullSequences.Add(sequence.ToString());
                     }
                 }
             }

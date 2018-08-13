@@ -9,13 +9,13 @@ namespace ProjectEuler
     class Problem2
     {
         // This is the limit as stated by project euler. 
-        private const int limit = 4000000;
-        private List<int> fibListValue;
+        private const int Limit = 4000000;
+        private List<int> _fibListValue;
 
         public List<int> FibList
         {
-            get { return fibListValue; }
-            set { fibListValue = value; }
+            get { return _fibListValue; }
+            set { _fibListValue = value; }
         }
 
         public Problem2()
@@ -35,7 +35,7 @@ namespace ProjectEuler
 
         public void CompleteList()
         {
-            while(NextFib() < limit)
+            while(NextFib() < Limit)
             {
                 FibList.Add(NextFib());
             }
