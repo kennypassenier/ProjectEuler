@@ -17,7 +17,7 @@ namespace ProjectEuler
             new Problem31();
             
             sw.Stop();
-            Console.WriteLine(String.Format("Solution found in {0} milliseconds", sw.ElapsedMilliseconds));
+            Console.WriteLine("Solution found in {0} milliseconds", sw.ElapsedMilliseconds);
 
         }
     }
